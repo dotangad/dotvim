@@ -1,15 +1,9 @@
-" ============================================================================ "
-" ===                               PLUGINS                                === "
-" ============================================================================ "
-
-" TODO: add vim-plug install snippet to README
-" Install Plugins
 call plug#begin('~/.config/nvim/plugged')
 " Aesthetics
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
+Plug 'jdsimcoe/abstract.vim'
 
-" ======= Editing ======= "
 " Surround text objects
 Plug 'tpope/vim-surround'
 
@@ -34,26 +28,36 @@ Plug 'junegunn/goyo.vim'
 " Editorconfig support
 Plug 'editorconfig/editorconfig-vim'
 
-" ======= Syntax Highlighting ======= "
+" Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
-
-" ======= Git ======= "
 " Magit for vim
 Plug 'tpope/vim-fugitive'
 " Gitgutter
 Plug 'mhinz/vim-signify'
 
-Plug 'yegappan/mru'
-Plug 'ctrlpvim/ctrlp.vim'
-
+" IDE features
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" From
+" https://github.com/junegunn/fzf.vim/issues/210#issuecomment-341531470
+" set rtp+=/usr/local/opt/fzf
 Plug 'preservim/nerdtree'
 
-
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-
+" Completion
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
+" More IDE features
+Plug 'Shougo/denite.nvim'
+
+" Print function signatures in echo area
+Plug 'Shougo/echodoc.vim'
+
+" Icons
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 call plug#end()
