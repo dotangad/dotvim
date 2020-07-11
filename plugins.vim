@@ -3,6 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 Plug 'jdsimcoe/abstract.vim'
+Plug 'ayu-theme/ayu-vim'
 
 " Surround text objects
 Plug 'tpope/vim-surround'

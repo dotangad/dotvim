@@ -73,6 +73,7 @@ inoremap <C-l> <Esc>:lcl<CR>i
 " Enter normal mode and save file with C-s
 inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-s> :w<CR>
+nnoremap C-w v :vsplit<cr>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>W :Wall<CR>
 nnoremap <leader>q :q<CR>
@@ -88,10 +89,27 @@ source ~/.config/nvim/plugins.vim
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " Colors
-colorscheme abstract
+" colorscheme abstract
+set termguicolors     " enable true colors support
+" Ayu theme
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 
 " Setup FZF
 nnoremap <C-p> :<C-u>FZF<CR> 
 
 " Coc Config
 source ~/.config/nvim/coc-config.vim
+
+" NERDTree and NERDCommenter
+let NERDTreeShowHidden = 1
+nnoremap <leader>t :NERDTreeToggle<CR>
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTreeNodeDelimiter = "\u00a0"
+nnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
+vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
+
+" <leader>g toggles Goyo
+nnoremap <silent> <leader>g :Goyo<cr>
+
