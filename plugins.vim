@@ -35,7 +35,7 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Magit for vim
 Plug 'tpope/vim-fugitive'
 " Gitgutter
-Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 
 " IDE features
 Plug 'junegunn/fzf.vim'
@@ -49,12 +49,6 @@ Plug 'preservim/nerdtree'
 Plug 'Shougo/neco-vim'
 Plug 'neoclide/coc-neco'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-
-" More IDE features
-Plug 'Shougo/denite.nvim'
-
-" Print function signatures in echo area
-Plug 'Shougo/echodoc.vim'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
