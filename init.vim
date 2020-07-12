@@ -45,6 +45,9 @@ set showmatch
 set incsearch    " Search as the characters are entered
 set hlsearch     " Highlight matches
 
+" Big line bad
+set colorcolumn=80
+
 " Copy to system clipboard
 nnoremap <leader>s "*
 
@@ -88,12 +91,36 @@ source ~/.config/nvim/plugins.vim
 " Make ctrl-p ignore files in .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-" Colors
-" colorscheme abstract
+" Aesthetics
 set termguicolors     " enable true colors support
 " Ayu theme
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
+" colorscheme abstract
+
+" Airline stuff
+let g:airline_powerline_fonts = 1
+let g:airline_mode_map = {
+  \ '__'     : '-',
+  \ 'c'      : 'C',
+  \ 'i'      : 'I',
+  \ 'ic'     : 'I',
+  \ 'ix'     : 'I',
+  \ 'n'      : 'N',
+  \ 'multi'  : 'M',
+  \ 'ni'     : 'N',
+  \ 'no'     : 'N',
+  \ 'R'      : 'R',
+  \ 'Rv'     : 'R',
+  \ 's'      : 'S',
+  \ 'S'      : 'S',
+  \ ' '     : 'S',
+  \ 't'      : 'T',
+  \ 'v'      : 'V',
+  \ 'V'      : 'V',
+  \ '	'     : 'V',
+  \ }
+let g:airline_theme = "abstract"
 
 " Setup FZF
 nnoremap <C-p> :<C-u>FZF<CR> 
