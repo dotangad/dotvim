@@ -5,7 +5,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'jdsimcoe/abstract.vim'
 Plug 'ayu-theme/ayu-vim'
-Plug 'Yggdroot/indentLine'
 Plug 'eemed/sitruuna.vim'
 
 " Surround text objects
