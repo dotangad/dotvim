@@ -96,6 +96,7 @@ set termguicolors     " enable true colors support
 " Ayu theme
 let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
+" colorscheme medic_chalk
 " colorscheme abstract
 
 " Airline stuff

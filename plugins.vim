@@ -6,6 +6,8 @@ Plug 'morhetz/gruvbox'
 Plug 'jdsimcoe/abstract.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'eemed/sitruuna.vim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'ParamagicDev/vim-medic_chalk'
 
 " Surround text objects
 Plug 'tpope/vim-surround'
