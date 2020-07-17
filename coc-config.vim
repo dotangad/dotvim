@@ -8,7 +8,8 @@ let g:coc_global_extensions = [
 	\ 'coc-html',
 	\ 'coc-yaml',
 	\ 'coc-yank',
-	\ 'coc-emmet'
+	\ 'coc-emmet',
+  \ 'coc-svelte'
   \ ]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -56,7 +57,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+			\ pumvisible() ? "\<C-n>" :
+			\ <SID>check_back_space() ? "\<TAB>" :
+			\ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"

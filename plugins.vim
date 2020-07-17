@@ -36,6 +36,7 @@ Plug 'editorconfig/editorconfig-vim'
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'evanleck/vim-svelte'
 
 " Magit for vim
 Plug 'tpope/vim-fugitive'

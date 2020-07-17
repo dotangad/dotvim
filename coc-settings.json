@@ -14,7 +14,8 @@
     "typescriptreact",
     "html",
     "css",
-    "jsob"
+    "json",
+		"svelte"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
