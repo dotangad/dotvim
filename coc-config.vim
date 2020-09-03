@@ -9,7 +9,10 @@ let g:coc_global_extensions = [
 	\ 'coc-yaml',
 	\ 'coc-yank',
 	\ 'coc-emmet',
-  \ 'coc-svelte'
+  \ 'coc-svelte',
+	\ 'coc-prisma',
+	\ 'coc-python',
+	\ 'coc-elixir'
   \ ]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')

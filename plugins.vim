@@ -1,13 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 " Aesthetics
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
-Plug 'jdsimcoe/abstract.vim'
-Plug 'ayu-theme/ayu-vim'
-Plug 'eemed/sitruuna.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'ParamagicDev/vim-medic_chalk'
+Plug 'itchyny/lightline.vim'
 
 " Surround text objects
 Plug 'tpope/vim-surround'
@@ -37,6 +30,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'evanleck/vim-svelte'
+Plug 'pantharshit00/vim-prisma'
+Plug 'alampros/vim-styled-jsx'
+Plug 'elixir-editors/vim-elixir'
 
 " Magit for vim
 Plug 'tpope/vim-fugitive'
@@ -46,6 +42,7 @@ Plug 'airblade/vim-gitgutter'
 " IDE features
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'jremmen/vim-ripgrep'
 " From
 " https://github.com/junegunn/fzf.vim/issues/210#issuecomment-341531470
 " set rtp+=/usr/local/opt/fzf

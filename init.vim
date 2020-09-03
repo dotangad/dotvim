@@ -9,9 +9,8 @@ filetype plugin indent on
 
 " Remove delays while switching modes
 set timeoutlen=1000 ttimeoutlen=10
-
-" Map leader to ","
-let mapleader = ","
+" Map leader to " "
+let mapleader = " "
 
 " Setup indentation, two spaces
 set tabstop=2
@@ -47,6 +46,7 @@ set hlsearch     " Highlight matches
 
 " Big line bad
 set colorcolumn=80
+highlight ColorColumn ctermbg=LightGrey guibg=grey23
 
 " Copy to system clipboard
 nnoremap <leader>s "*
@@ -78,6 +78,7 @@ inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-s> :w<CR>
 nnoremap C-w v :vsplit<cr>
 nnoremap <leader>w :w<CR>
+nnoremap <leader>r :e!<CR>
 nnoremap <leader>W :Wall<CR>
 nnoremap <leader>q :q<CR>
 
@@ -89,39 +90,20 @@ nnoremap <leader>vr :source ~/.config/nvim/init.vim<CR>
 source ~/.config/nvim/plugins.vim
 
 " Make ctrl-p ignore files in .gitignore
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard', '.elixir_ls']
 
 " Aesthetics
 set termguicolors     " enable true colors support
-" Ayu theme
-let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
-" colorscheme medic_chalk
-" colorscheme abstract
-
-" Airline stuff
-let g:airline_powerline_fonts = 1
-let g:airline_mode_map = {
-  \ '__'     : '-',
-  \ 'c'      : 'C',
-  \ 'i'      : 'I',
-  \ 'ic'     : 'I',
-  \ 'ix'     : 'I',
-  \ 'n'      : 'N',
-  \ 'multi'  : 'M',
-  \ 'ni'     : 'N',
-  \ 'no'     : 'N',
-  \ 'R'      : 'R',
-  \ 'Rv'     : 'R',
-  \ 's'      : 'S',
-  \ 'S'      : 'S',
-  \ ' '     : 'S',
-  \ 't'      : 'T',
-  \ 'v'      : 'V',
-  \ 'V'      : 'V',
-  \ '	'     : 'V',
-  \ }
-let g:airline_theme = "abstract"
+" Lightline theme
+let g:lightline = {
+      \ 'colorscheme': 'deus',
+			\ }
+" Victor Mono has cursive support, this line enables it
+highlight Comment cterm=italic gui=italic
+" Clear background
+highlight Normal ctermbg=NONE guibg=NONE
+" autocmd ColorScheme * highlight! link SignColumn LineNr
+highlight! link SignColumn LineNr
 
 " Setup FZF
 nnoremap <C-p> :<C-u>FZF<CR> 
@@ -141,3 +123,12 @@ vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 " <leader>g toggles Goyo
 nnoremap <silent> <leader>g :Goyo<cr>
 
+" PEP8 indentation
+au FileType python set
+    \ tabstop=4
+    \ softtabstop=4
+    \ shiftwidth=4
+    \ textwidth=80
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
