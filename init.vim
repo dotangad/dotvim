@@ -4,8 +4,7 @@ scripte utf-8
 set nocompatible
 
 " Enable file specific syntax highlighting
-syntax enable
-filetype plugin indent on
+syntax enable filetype plugin indent on
 
 " Remove delays while switching modes
 set timeoutlen=1000 ttimeoutlen=10
@@ -15,6 +14,7 @@ let mapleader = " "
 " Setup indentation, two spaces
 set tabstop=2
 set shiftwidth=2
+set expandtab
 set autoindent
 set smartindent
 set cindent
@@ -46,13 +46,9 @@ set hlsearch     " Highlight matches
 
 " Big line bad
 set colorcolumn=80
-highlight ColorColumn ctermbg=LightGrey guibg=grey23
-
-" Copy to system clipboard
-nnoremap <leader>s "*
 
 " Turn off search highlight 
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>, :nohlsearch<CR>
 
 " Pressing shift is tedious
 nnoremap ; :
@@ -68,6 +64,7 @@ nnoremap <Up> gk
 
 " jk is escape  
 inoremap jk <Esc>
+vnoremap jk <Esc>
 
 " Close LocationList with <leader>lcl
 nnoremap <leader>lcl :lcl<CR>
@@ -77,48 +74,35 @@ inoremap <C-l> <Esc>:lcl<CR>i
 inoremap <C-s> <Esc>:w<CR>
 nnoremap <C-s> :w<CR>
 nnoremap C-w v :vsplit<cr>
-nnoremap <leader>w :w<CR>
-nnoremap <leader>r :e!<CR>
+nnoremap <leader><space> :w<CR>
+nnoremap <leader>R :e!<CR>
 nnoremap <leader>W :Wall<CR>
 nnoremap <leader>q :q<CR>
 
-" Edit and reload vimrc
-nnoremap <leader>ve :tabe ~/.config/nvim/init.vim<CR>
-nnoremap <leader>vr :source ~/.config/nvim/init.vim<CR>
+" Reload vimrc
+nnoremap <leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Plugins
 source ~/.config/nvim/plugins.vim
 
 " Make ctrl-p ignore files in .gitignore
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard', '.elixir_ls']
-
+let g:ctrlp_user_command = [
+      \ '.git/',
+      \ 'git --git-dir=%s/.git ls-files -oc --exclude-standard',
+      \ '.elixir_ls'
+      \ ]
+            
 " Aesthetics
 set termguicolors     " enable true colors support
-" Lightline theme
-let g:lightline = {
-      \ 'colorscheme': 'deus',
-			\ }
-" Victor Mono has cursive support, this line enables it
+colorscheme darkspace
 highlight Comment cterm=italic gui=italic
-" Clear background
-highlight Normal ctermbg=NONE guibg=NONE
-" autocmd ColorScheme * highlight! link SignColumn LineNr
-highlight! link SignColumn LineNr
+highlight ColorColumn ctermbg=Grey guibg=#333333
 
 " Setup FZF
 nnoremap <C-p> :<C-u>FZF<CR> 
 
 " Coc Config
 source ~/.config/nvim/coc-config.vim
-
-" NERDTree and NERDCommenter
-let NERDTreeShowHidden = 1
-nnoremap <leader>t :NERDTreeToggle<CR>
-let g:NERDSpaceDelims = 1
-let g:NERDCommentEmptyLines = 1
-let g:NERDTreeNodeDelimiter = "\u00a0"
-nnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
-vnoremap <leader>cc :call NERDComment(0,"toggle")<CR>
 
 " <leader>g toggles Goyo
 nnoremap <silent> <leader>g :Goyo<cr>
@@ -132,3 +116,12 @@ au FileType python set
     \ expandtab
     \ autoindent
     \ fileformat=unix
+
+" EJS is HTML
+au BufNewFile,BufRead *.ejs set filetype=html
+
+" Indentation hacks
+" Don't leave visual mode after indenting
+vnoremap <tab> >gv
+vnoremap >> >gv
+vnoremap << <gv

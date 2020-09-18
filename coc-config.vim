@@ -12,7 +12,8 @@ let g:coc_global_extensions = [
   \ 'coc-svelte',
 	\ 'coc-prisma',
 	\ 'coc-python',
-	\ 'coc-elixir'
+	\ 'coc-elixir',
+  \ 'coc-explorer'
   \ ]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -32,7 +33,7 @@ function! ShowDocIfNoDiagnostic(timer_id)
 endfunction
 
 function! s:show_hover_doc()
-  call timer_start(500, 'ShowDocIfNoDiagnostic')
+  call timer_start(100, 'ShowDocIfNoDiagnostic')
 endfunction
 
 autocmd CursorHoldI * :call <SID>show_hover_doc()
@@ -55,12 +56,5 @@ nmap <leader>rn <Plug>(coc-rename)
 " Trigger completion with c-space
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" From coc.nvim README
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-			\ pumvisible() ? "\<C-n>" :
-			\ <SID>check_back_space() ? "\<TAB>" :
-			\ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Explorer
+nmap <space>t :CocCommand explorer<CR>

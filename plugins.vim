@@ -1,12 +1,18 @@
 call plug#begin('~/.config/nvim/plugged')
 " Aesthetics
 Plug 'itchyny/lightline.vim'
+Plug 'lucasprag/simpleblack'
+Plug 'duckwork/low.vim'
+Plug 'lewis6991/moonlight.vim'
+Plug 'atahabaki/archman-vim'
+Plug 'ts-26a/vim-darkspace'
 
 " Surround text objects
 Plug 'tpope/vim-surround'
 
-" Auto match brackers and quotes
+" Auto match brackets, tags and quotes
 Plug 'jiangmiao/auto-pairs'
+Plug 'gregsexton/MatchTag'
 
 " Comment code faster
 Plug 'preservim/nerdcommenter'
@@ -16,9 +22,6 @@ Plug 'mattn/emmet-vim'
 
 " Sensible defaults
 Plug 'tpope/vim-sensible'
-
-" Unix command goodness
-Plug 'tpope/vim-eunuch'
 
 " More focused editing
 Plug 'junegunn/goyo.vim'
@@ -46,7 +49,6 @@ Plug 'jremmen/vim-ripgrep'
 " From
 " https://github.com/junegunn/fzf.vim/issues/210#issuecomment-341531470
 " set rtp+=/usr/local/opt/fzf
-Plug 'preservim/nerdtree'
 
 " Completion
 Plug 'Shougo/neco-vim'
@@ -57,4 +59,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+" VimWiki
+Plug 'vimwiki/vimwiki'
+source ~/.config/nvim/plug/vimwiki.vim
 call plug#end()
