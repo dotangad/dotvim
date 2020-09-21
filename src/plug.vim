@@ -1,10 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 " Aesthetics
 Plug 'itchyny/lightline.vim'
-Plug 'lucasprag/simpleblack'
-Plug 'duckwork/low.vim'
-Plug 'lewis6991/moonlight.vim'
-Plug 'atahabaki/archman-vim'
 Plug 'ts-26a/vim-darkspace'
 
 " Surround text objects
@@ -15,7 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'gregsexton/MatchTag'
 
 " Comment code faster
-Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-commentary'
 
 " Expand snippets into HTML trees
 Plug 'mattn/emmet-vim'
@@ -42,13 +38,12 @@ Plug 'tpope/vim-fugitive'
 " Gitgutter
 Plug 'airblade/vim-gitgutter'
 
-" IDE features
+" Fuzzy file finding
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+" Project wide search
 Plug 'jremmen/vim-ripgrep'
-" From
-" https://github.com/junegunn/fzf.vim/issues/210#issuecomment-341531470
-" set rtp+=/usr/local/opt/fzf
 
 " Completion
 Plug 'Shougo/neco-vim'
@@ -61,5 +56,4 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " VimWiki
 Plug 'vimwiki/vimwiki'
-source ~/.config/nvim/plug/vimwiki.vim
 call plug#end()
