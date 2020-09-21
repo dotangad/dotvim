@@ -18,7 +18,7 @@ nnoremap <Up> gk
 
 " jk is escape  
 inoremap jk <Esc>
-vnoremap jk <Esc>
+vnoremap aa <Esc>
 
 " Close LocationList with <leader>lcl
 nnoremap <leader>lcl :lcl<CR>
