@@ -43,7 +43,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Setup FZF
-nnoremap <C-p> :<C-u>FZF<CR> 
+nnoremap <C-p> :<C-u>GFiles<CR> 
 
 " <leader>g toggles Goyo
 nnoremap <silent> <leader>g :Goyo<cr>
@@ -52,3 +52,27 @@ nnoremap <silent> <leader>g :Goyo<cr>
 vnoremap <tab> >gv
 vnoremap >> >gv
 vnoremap << <gv
+
+" Tabs
+nnoremap L :tabn<cr>
+nnoremap H :tabp<cr>
+cabbrev t tabe
+
+" run code, useful for ctfs and cp
+augroup compileandrun
+  autocmd!
+  autocmd filetype python nnoremap <f5> :w <bar> :!python3 % <cr>
+  autocmd filetype python nnoremap <f6> :w <bar> :vnew <bar> :te exec "/usr/local/bin/python3" <cr>
+  autocmd filetype cpp nnoremap <f5> :w <cr> :!g++ -std=c++11 % <cr>
+  autocmd filetype cpp nnoremap <f6> :te exec "./a.out" <cr>
+  autocmd filetype c nnoremap <f5> :w <bar> !make %:r && ./%:r <cr>
+  autocmd filetype java nnoremap <f5> :w <bar> !javac % && java %:r <cr>
+augroup END
+
+" Keybinds for dart/flutter
+nnoremap <leader>fa :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fr :FlutterHotReload<cr>
+nnoremap <leader>fR :FlutterHotRestart<cr>
+nnoremap <leader>fD :FlutterVisualDebug<cr>
+

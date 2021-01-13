@@ -2,6 +2,15 @@ call plug#begin('~/.config/nvim/plugged')
 " Aesthetics
 Plug 'itchyny/lightline.vim'
 Plug 'ts-26a/vim-darkspace'
+Plug 'jdsimcoe/abstract.vim'
+Plug 'danilo-augusto/vim-afterglow'
+Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'w0ng/vim-hybrid'
+Plug 'ParamagicDev/vim-medic_chalk'
+Plug 'sainnhe/sonokai'
+Plug 'lewis6991/moonlight.vim'
+Plug 'wadackel/vim-dogrun' " Lightline: 'dogrun'
+Plug 'whatyouhide/vim-gotham' " Lightline: gotham, gotham256
 
 " Surround text objects
 Plug 'tpope/vim-surround'
@@ -56,4 +65,13 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " VimWiki
 Plug 'vimwiki/vimwiki'
+
+" Floating terminal ooo
+Plug 'voldikss/vim-floaterm'
+
+" Dart/flutter support
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+Plug 'thosakwe/vim-flutter'
 call plug#end()

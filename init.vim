@@ -21,4 +21,7 @@ au FileType python set
 
 " EJS is HTML
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufRead *.eta set filetype=html
 
+" Format on save for dart
+autocmd BufWritePost *.dart DartFmt

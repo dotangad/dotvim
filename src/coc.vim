@@ -13,7 +13,8 @@ let g:coc_global_extensions = [
 	\ 'coc-prisma',
 	\ 'coc-python',
 	\ 'coc-elixir',
-  \ 'coc-explorer'
+  \ 'coc-explorer',
+  \ 'coc-flutter',
   \ ]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
@@ -25,7 +26,7 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
 endif
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent><leader>K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)

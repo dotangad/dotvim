@@ -41,3 +41,5 @@ set hlsearch     " Highlight matches
 " Big line bad
 set colorcolumn=80
 
+" Mouse support is nice sometimes
+set mouse=a
