@@ -15,6 +15,7 @@ let g:coc_global_extensions = [
 	\ 'coc-elixir',
   \ 'coc-explorer',
   \ 'coc-flutter',
+	\ 'coc-spell-checker'
   \ ]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
