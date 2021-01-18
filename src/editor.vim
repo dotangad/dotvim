@@ -35,8 +35,8 @@ set wildmenu
 set showmatch
 
 " Better search
-set incsearch    " Search as the characters are entered
-set hlsearch     " Highlight matches
+set incsearch
+set nohlsearch
 
 " Big line bad
 set colorcolumn=80
