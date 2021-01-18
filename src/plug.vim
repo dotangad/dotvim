@@ -64,7 +64,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " VimWiki
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 
 " Floating terminal ooo
 Plug 'voldikss/vim-floaterm'

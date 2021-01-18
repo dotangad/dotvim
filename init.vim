@@ -6,7 +6,7 @@ source ~/.config/nvim/src/keymap.vim
 source ~/.config/nvim/src/aesthetics.vim
 
 " Plugins
-source ~/.config/nvim/src/vimwiki.vim
+" source ~/.config/nvim/src/vimwiki.vim
 source ~/.config/nvim/src/coc.vim
 
 " PEP8 indentation
