@@ -46,3 +46,7 @@ set mouse=a
 
 " Don't show mode in command line
 set noshowmode
+
+" Wrap lines for prose
+autocmd FileType markdown set wrap
+autocmd FileType markdown set linebreak
