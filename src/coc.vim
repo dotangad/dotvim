@@ -11,7 +11,7 @@ let g:coc_global_extensions = [
 	\ 'coc-emmet',
   \ 'coc-svelte',
 	\ 'coc-prisma',
-	\ 'coc-python',
+	\ 'coc-jedi',
 	\ 'coc-elixir',
   \ 'coc-explorer',
   \ 'coc-flutter',
@@ -56,11 +56,11 @@ nmap <silent> gr <Plug>(coc-references)
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <space>o :<C-u>CocList outline<cr>
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
-nmap <leader>do <Plug>(coc-codeaction)
+nnoremap <silent> <leader>d :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>s :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <leader>o :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
+nmap <leader>do :CocAction<cr>
 nmap <leader>rn <Plug>(coc-rename)
 
 

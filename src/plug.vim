@@ -28,8 +28,11 @@ Plug 'mattn/emmet-vim'
 " Sensible defaults
 Plug 'tpope/vim-sensible'
 
-" More focused editing
+" Writing/notes
 Plug 'junegunn/goyo.vim'
+Plug 'farconics/victionary'
+Plug 'junegunn/vim-easy-align'
+Plug 'plasticboy/vim-markdown' 
 
 " Editorconfig support
 Plug 'editorconfig/editorconfig-vim'
@@ -62,9 +65,6 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " Icons
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-" VimWiki
-" Plug 'vimwiki/vimwiki'
 
 " Floating terminal ooo
 Plug 'voldikss/vim-floaterm'

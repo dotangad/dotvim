@@ -43,3 +43,6 @@ set colorcolumn=80
 
 " Mouse support is nice sometimes
 set mouse=a
+
+" Don't show mode in command line
+set noshowmode

@@ -16,4 +16,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 - [ ] https://www.youtube.com/watch?v=ViHgyApE9zM
 - [ ] https://www.vimfromscratch.com/articles/vim-for-ruby-and-rails-in-2019/
 - [ ] https://github.com/nvim-telescope/telescope.nvim
-- [ ] https://github.com/iamcco/coc-flutter
+- [x] https://github.com/iamcco/coc-flutter
+- [ ] https://thoughtbot.com/blog/how-to-do-90-of-what-plugins-do-with-just-vim

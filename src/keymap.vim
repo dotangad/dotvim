@@ -62,7 +62,7 @@ cabbrev t tabe
 augroup compileandrun
   autocmd!
   autocmd filetype python nnoremap <f5> :w <bar> :!python3 % <cr>
-  autocmd filetype python nnoremap <f6> :w <bar> :vnew <bar> :te exec "/usr/local/bin/python3" <cr>
+  autocmd filetype python nnoremap <f6> :w <bar> :15sp <bar> :te exec python3 % <cr>
   autocmd filetype cpp nnoremap <f5> :w <cr> :!g++ -std=c++11 % <cr>
   autocmd filetype cpp nnoremap <f6> :te exec "./a.out" <cr>
   autocmd filetype c nnoremap <f5> :w <bar> !make %:r && ./%:r <cr>
@@ -75,4 +75,20 @@ nnoremap <leader>fq :FlutterQuit<cr>
 nnoremap <leader>fr :FlutterHotReload<cr>
 nnoremap <leader>fR :FlutterHotRestart<cr>
 nnoremap <leader>fD :FlutterVisualDebug<cr>
+
+" Dictionary
+let g:victionary#map_defaults = 0
+" nmap <mapping> <Plug>(victionary#define_prompt)
+nmap <leader>D <Plug>(victionary#define_under_cursor)
+" nmap <mapping> <Plug>(victionary#synonym_prompt)
+nmap <leader>S <Plug>(victionary#synonym_under_cursor)
+
+" Date anywhere
+nmap <leader>T :r !date "+\%Y-\%m-\%d \%H:\%M \%Z"<CR>
+
+" https://thoughtbot.com/blog/align-github-flavored-markdown-tables-in-vim
+" Align GitHub-flavored Markdown tables
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+" au FileType markdown vmap <Enter> <Plug>(EasyAlign)
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
