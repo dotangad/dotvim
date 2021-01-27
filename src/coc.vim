@@ -11,7 +11,6 @@ let g:coc_global_extensions = [
 	\ 'coc-emmet',
   \ 'coc-svelte',
 	\ 'coc-prisma',
-	\ 'coc-jedi',
 	\ 'coc-elixir',
   \ 'coc-explorer',
   \ 'coc-flutter',
