@@ -14,16 +14,10 @@ let g:coc_global_extensions = [
 	\ 'coc-elixir',
   \ 'coc-explorer',
   \ 'coc-flutter',
-	\ 'coc-spell-checker'
+	\ 'coc-spell-checker',
+  \ 'coc-prettier',
+  \ 'coc-eslint'
   \ ]
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-  let g:coc_global_extensions += ['coc-eslint']
-endif
 
 " Use K to show documentation in preview window.
 nnoremap <silent><leader>K :call <SID>show_documentation()<CR>
@@ -35,19 +29,6 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#util#has_float() == 0)
-    silent call CocActionAsync('doHover')
-  endif
-endfunction
-
-function! s:show_hover_doc()
-  call timer_start(0, 'ShowDocIfNoDiagnostic')
-endfunction
-
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
