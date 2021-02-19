@@ -21,6 +21,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Automatically update file content
+set autoread
+
 " Show line numbers
 set number
 set relativenumber
