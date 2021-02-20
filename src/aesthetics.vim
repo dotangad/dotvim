@@ -1,15 +1,6 @@
 " Enable true colors
 set termguicolors
-" Colorscheme and enhancements
-" color medic_chalk
-" color hybrid
-" color deep-space
-" color sonokai
-" color moonlight
-" color dogrun
-" color gotham
-" color atlas
-color darkspace
+color monokai-soda
 highlight Comment cterm=italic gui=italic
 highlight ColorColumn ctermbg=DarkGrey guibg=#333333
 

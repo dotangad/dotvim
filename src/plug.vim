@@ -1,16 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 " Aesthetics
 Plug 'itchyny/lightline.vim'
-Plug 'ts-26a/vim-darkspace'
-Plug 'jdsimcoe/abstract.vim'
-Plug 'danilo-augusto/vim-afterglow'
-Plug 'tyrannicaltoucan/vim-deep-space'
-Plug 'w0ng/vim-hybrid'
-Plug 'ParamagicDev/vim-medic_chalk'
-Plug 'sainnhe/sonokai'
-Plug 'lewis6991/moonlight.vim'
-Plug 'wadackel/vim-dogrun' " Lightline: 'dogrun'
-Plug 'whatyouhide/vim-gotham' " Lightline: gotham, gotham256
+Plug 'jzelinskie/monokai-soda.vim'
 
 " Surround text objects
 Plug 'tpope/vim-surround'
