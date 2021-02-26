@@ -43,7 +43,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Setup FZF
-nnoremap <C-p> :<C-u>GFiles<CR> 
+nnoremap <C-p> :<C-u>Files<CR> 
 
 " <leader>g toggles Goyo
 nnoremap <silent> <leader>g :Goyo<cr>
