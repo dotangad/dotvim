@@ -35,8 +35,6 @@
   },
   "explorer.position": "floating",
   "explorer.icon.enableNerdfont": true,
-  "cSpell.userWords": [
-    "backticks",
-    "lmao"
-  ]
+  "cSpell.userWords": ["backticks", "lmao"],
+  "emmet.includeLanguages": { "javascript": "javascriptreact" }
 }

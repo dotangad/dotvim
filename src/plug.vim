@@ -13,9 +13,6 @@ Plug 'gregsexton/MatchTag'
 " Comment code faster
 Plug 'tpope/vim-commentary'
 
-" Expand snippets into HTML trees
-Plug 'mattn/emmet-vim'
-
 " Sensible defaults
 Plug 'tpope/vim-sensible'
 
