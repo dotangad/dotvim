@@ -32,6 +32,7 @@ Plug 'evanleck/vim-svelte'
 Plug 'pantharshit00/vim-prisma'
 Plug 'alampros/vim-styled-jsx'
 Plug 'elixir-editors/vim-elixir'
+Plug 'vim-crystal/vim-crystal'
 
 " Magit for vim
 Plug 'tpope/vim-fugitive'
