@@ -1,7 +1,6 @@
 " Enable true colors
 set termguicolors
-color monokai-soda
-highlight Comment cterm=italic gui=italic
+color spaceduck
 highlight ColorColumn ctermbg=DarkGrey guibg=#333333
 
 let g:goyo_width=85
@@ -21,9 +20,12 @@ let g:lightline = {
         \ "\<C-s>": '  SB',
         \ 't': '  T',
         \ },
-      \ 'colorscheme': 'atlas'
+      \ 'colorscheme': 'spaceduck'
       \ }
 
+" Custom theme
+" \ 'colorscheme': 'atlas'
+      
 let s:p = {"normal": {}, "inactive": {}, "insert": {}, "replace": {}, "visual": {}, "tabline": {} }
 
 let s:black = ["#000000", "Black"]

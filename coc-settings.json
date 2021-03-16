@@ -20,7 +20,8 @@
     "svelte",
     "prisma",
     "elixir",
-    "css"
+    "css",
+    "go"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
@@ -36,5 +37,5 @@
   "explorer.position": "floating",
   "explorer.icon.enableNerdfont": true,
   "cSpell.userWords": ["backticks", "lmao"],
-  "emmet.includeLanguages": { "javascript": "javascriptreact" }
+  "emmet.includeLanguages": { "javascript": "javascriptreact", "blade": "html" }
 }

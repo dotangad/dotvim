@@ -2,6 +2,8 @@ call plug#begin('~/.config/nvim/plugged')
 " Aesthetics
 Plug 'itchyny/lightline.vim'
 Plug 'jzelinskie/monokai-soda.vim'
+Plug 'jaredgorski/spacecamp'
+Plug 'pineapplegiant/spaceduck'
 
 " Surround text objects
 Plug 'tpope/vim-surround'
@@ -63,4 +65,7 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
 Plug 'thosakwe/vim-flutter'
+
+" Golang
+Plug 'fatih/vim-go'
 call plug#end()

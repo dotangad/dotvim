@@ -16,7 +16,8 @@ let g:coc_global_extensions = [
   \ 'coc-flutter',
 	\ 'coc-spell-checker',
   \ 'coc-prettier',
-  \ 'coc-eslint'
+  \ 'coc-eslint',
+  \ 'coc-go'
   \ ]
 
 " Use K to show documentation in preview window.
