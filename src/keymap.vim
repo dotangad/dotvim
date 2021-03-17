@@ -34,16 +34,16 @@ nnoremap <leader>W :Wall<CR>
 nnoremap C-w v :vsplit<cr>
 
 " Reload buffer with <leader>R
-nnoremap <leader>R :e!<CR>
+nnoremap <leader>r :e!<CR>
+" Reload vimrc
+nnoremap <leader>R :source ~/.config/nvim/init.vim<CR>
 
 " Close windows easier
 nnoremap <leader>q :q<CR>
 
-" Reload vimrc
-nnoremap <leader>r :source ~/.config/nvim/init.vim<CR>
-
 " Setup FZF
 nnoremap <C-p> :<C-u>Files<CR> 
+nnoremap <C-t> :<C-u>Tags<CR>
 
 " <leader>g toggles Goyo
 nnoremap <silent> <leader>g :Goyo<cr>
@@ -52,6 +52,8 @@ nnoremap <silent> <leader>g :Goyo<cr>
 vnoremap <tab> >gv
 vnoremap >> >gv
 vnoremap << <gv
+nnoremap >> >gv
+nnoremap << <gv
 
 " Tabs
 nnoremap L :tabn<cr>

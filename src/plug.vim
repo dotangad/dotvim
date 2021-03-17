@@ -68,4 +68,14 @@ Plug 'thosakwe/vim-flutter'
 
 " Golang
 Plug 'fatih/vim-go'
+
+" PHP
+Plug 'tpope/vim-dispatch'             "| Optional
+Plug 'tpope/vim-projectionist'        "|
+Plug 'noahfrederick/vim-composer'     "|
+Plug 'noahfrederick/vim-laravel'
+
+" Tags
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()

@@ -17,7 +17,8 @@ let g:coc_global_extensions = [
 	\ 'coc-spell-checker',
   \ 'coc-prettier',
   \ 'coc-eslint',
-  \ 'coc-go'
+  \ 'coc-go',
+  \ 'coc-phpls'
   \ ]
 
 " Use K to show documentation in preview window.
@@ -50,3 +51,4 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Explorer
 nmap <space>t :CocCommand explorer<CR>
+

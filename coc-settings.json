@@ -21,7 +21,8 @@
     "prisma",
     "elixir",
     "css",
-    "go"
+    "go",
+    "php"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
