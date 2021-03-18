@@ -77,5 +77,4 @@ Plug 'noahfrederick/vim-laravel'
 
 " Tags
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()

@@ -3,6 +3,8 @@ set termguicolors
 color spaceduck
 highlight ColorColumn ctermbg=DarkGrey guibg=#333333
 
+set cursorline
+
 let g:goyo_width=85
 let g:goyo_height=90
 
