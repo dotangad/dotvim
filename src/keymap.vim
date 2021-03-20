@@ -44,6 +44,7 @@ nnoremap <leader>q :q<CR>
 " Setup FZF
 nnoremap <C-p> :<C-u>Files<CR> 
 nnoremap <C-t> :<C-u>Tags<CR>
+nnoremap <C-b> :<C-u>Buffers<CR>
 
 " <leader>g toggles Goyo
 nnoremap <silent> <leader>g :Goyo<cr>
