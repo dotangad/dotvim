@@ -78,4 +78,6 @@ Plug 'jwalton512/vim-blade'
 
 " Tags
 Plug 'ludovicchabant/vim-gutentags'
+
+Plug 'sotte/presenting.vim'
 call plug#end()

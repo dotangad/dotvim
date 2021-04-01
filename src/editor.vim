@@ -40,6 +40,8 @@ set showmatch
 " Better search
 set incsearch
 set nohlsearch
+set ignorecase
+set smartcase
 
 " Big line bad
 set colorcolumn=80
