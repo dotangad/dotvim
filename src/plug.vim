@@ -80,4 +80,5 @@ Plug 'jwalton512/vim-blade'
 Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'sotte/presenting.vim'
+Plug 'djoshea/vim-autoread'
 call plug#end()
