@@ -89,6 +89,9 @@ nmap <leader>S <Plug>(victionary#synonym_under_cursor)
 " Date anywhere
 nmap <leader>T :r !date "+\%Y-\%m-\%d \%H:\%M \%Z"<CR>
 
+" File manager
+nnoremap <leader>t :NnnPicker %:p:h<CR>
+
 " https://thoughtbot.com/blog/align-github-flavored-markdown-tables-in-vim
 " Align GitHub-flavored Markdown tables
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)

@@ -1,36 +1,32 @@
 " Enable true colors
 set termguicolors
-color spaceduck
+color hyper
 highlight ColorColumn ctermbg=DarkGrey guibg=#333333
 
-set cursorline
+" set cursorline
 
 let g:goyo_width=85
 let g:goyo_height=90
 
 let g:lightline = {
       \ 'mode_map': {
-        \ 'n' : '  N',
-        \ 'i' : '  I',
-        \ 'R' : '  R',
-        \ 'v' : '  V',
-        \ 'V' : '  VL',
-        \ "\<C-v>": '  VB',
-        \ 'c' : '  C',
-        \ 's' : '  S',
-        \ 'S' : '  SL',
-        \ "\<C-s>": '  SB',
-        \ 't': '  T',
+        \ 'n' : '  NOR',
+        \ 'i' : '  INS',
+        \ 'R' : '  REP',
+        \ 'v' : '  VIS',
+        \ 'V' : '  VIL',
+        \ "\<C-v>": '  VIB',
+        \ 'c' : '  COM',
+        \ 's' : '  SEL',
+        \ 'S' : '  S-L',
+        \ "\<C-s>": '  S-B',
+        \ 't': '  TER',
         \ },
-      \ 'colorscheme': 'spaceduck'
       \ }
-
-" Custom theme
-" \ 'colorscheme': 'atlas'
       
 let s:p = {"normal": {}, "inactive": {}, "insert": {}, "replace": {}, "visual": {}, "tabline": {} }
 
-let s:black = ["#000000", "Black"]
+let s:black = ["#1f1f24", "Black"]
 let s:white = ["#ffffff", "White"]
 let s:dark_grey = ["#666666", "White"]
 
@@ -61,5 +57,5 @@ let s:p.tabline.tabsel = [[s:white, s:black, 'bold']]
 let s:p.tabline.middle = [[s:white, s:black]]
 let s:p.tabline.right = [[s:white, s:black]]
 
-let g:lightline#colorscheme#atlas#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#dotangad#palette = lightline#colorscheme#flatten(s:p)
 

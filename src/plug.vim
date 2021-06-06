@@ -4,6 +4,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'jzelinskie/monokai-soda.vim'
 Plug 'jaredgorski/spacecamp'
 Plug 'pineapplegiant/spaceduck'
+Plug 'arzg/vim-colors-xcode'
+Plug 'victorze/foo'
+Plug 'eemed/sitruuna.vim'
 
 " Surround text objects
 Plug 'tpope/vim-surround'
@@ -15,7 +18,7 @@ Plug 'gregsexton/MatchTag'
 " Comment code faster
 Plug 'tpope/vim-commentary'
 
-" Sensible defaults
+"Sensible defaults
 Plug 'tpope/vim-sensible'
 
 " Writing/notes
@@ -35,6 +38,7 @@ Plug 'pantharshit00/vim-prisma'
 Plug 'alampros/vim-styled-jsx'
 Plug 'elixir-editors/vim-elixir'
 Plug 'vim-crystal/vim-crystal'
+Plug 'jxnblk/vim-mdx-js'
 
 " Magit for vim
 Plug 'tpope/vim-fugitive'
@@ -55,7 +59,6 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Floating terminal ooo
 Plug 'voldikss/vim-floaterm'
@@ -81,4 +84,6 @@ Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'sotte/presenting.vim'
 Plug 'djoshea/vim-autoread'
+Plug 'mcchrish/nnn.vim'
 call plug#end()
+
