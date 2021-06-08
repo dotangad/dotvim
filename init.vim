@@ -28,4 +28,3 @@ autocmd BufWritePost *.dart DartFmt
 
 " Disable folding in markdown files
 let g:vim_markdown_folding_disabled = 1
-
