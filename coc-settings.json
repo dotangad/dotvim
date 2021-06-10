@@ -22,7 +22,8 @@
     "elixir",
     "css",
     "go",
-    "php"
+    "php",
+    "rust"
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,

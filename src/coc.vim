@@ -18,7 +18,8 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-eslint',
   \ 'coc-go',
-  \ 'coc-phpls'
+  \ 'coc-phpls',
+  \ 'coc-rls'
   \ ]
 
 " Use K to show documentation in preview window.
