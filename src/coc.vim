@@ -14,7 +14,6 @@ let g:coc_global_extensions = [
 	\ 'coc-elixir',
   \ 'coc-explorer',
   \ 'coc-flutter',
-	\ 'coc-spell-checker',
   \ 'coc-prettier',
   \ 'coc-eslint',
   \ 'coc-go',

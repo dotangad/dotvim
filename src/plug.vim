@@ -1,12 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 " Aesthetics
 Plug 'itchyny/lightline.vim'
-Plug 'jzelinskie/monokai-soda.vim'
-Plug 'jaredgorski/spacecamp'
-Plug 'pineapplegiant/spaceduck'
-Plug 'arzg/vim-colors-xcode'
-Plug 'victorze/foo'
-Plug 'eemed/sitruuna.vim'
+Plug 'tomasiser/vim-code-dark'
 
 " Surround text objects
 Plug 'tpope/vim-surround'
@@ -39,6 +34,8 @@ Plug 'alampros/vim-styled-jsx'
 Plug 'elixir-editors/vim-elixir'
 Plug 'vim-crystal/vim-crystal'
 Plug 'jxnblk/vim-mdx-js'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Magit for vim
 Plug 'tpope/vim-fugitive'
@@ -87,4 +84,3 @@ Plug 'djoshea/vim-autoread'
 Plug 'mcchrish/nnn.vim'
 Plug 'rust-lang/rust.vim'
 call plug#end()
-

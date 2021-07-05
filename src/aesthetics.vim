@@ -1,7 +1,9 @@
 " Enable true colors
 set termguicolors
-color hyper
+color codedark
 highlight ColorColumn ctermbg=DarkGrey guibg=#333333
+" highlight Normal ctermbg=black guibg=black
+highlight Comment cterm=italic gui=italic
 
 " set cursorline
 
@@ -22,6 +24,7 @@ let g:lightline = {
         \ "\<C-s>": '  S-B',
         \ 't': '  TER',
         \ },
+      \ 'colorscheme': 'codedark'
       \ }
       
 let s:p = {"normal": {}, "inactive": {}, "insert": {}, "replace": {}, "visual": {}, "tabline": {} }
