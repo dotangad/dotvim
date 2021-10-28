@@ -83,4 +83,6 @@ Plug 'sotte/presenting.vim'
 Plug 'djoshea/vim-autoread'
 Plug 'mcchrish/nnn.vim'
 Plug 'rust-lang/rust.vim'
+
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 call plug#end()

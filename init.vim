@@ -1,14 +1,13 @@
 scripte utf-8
-
 source ~/.config/nvim/src/editor.vim
-source ~/.config/nvim/src/plug.vim
 source ~/.config/nvim/src/keymap.vim
+
+source ~/.config/nvim/src/plug.vim
 source ~/.config/nvim/src/aesthetics.vim
 
 " Plugins
 " source ~/.config/nvim/src/vimwiki.vim
 source ~/.config/nvim/src/coc.vim
-
 " PEP8 indentation
 au FileType python set
     \ tabstop=4
@@ -28,3 +27,6 @@ autocmd BufWritePost *.dart DartFmt
 
 " Disable folding in markdown files
 let g:vim_markdown_folding_disabled = 1
+
+
+

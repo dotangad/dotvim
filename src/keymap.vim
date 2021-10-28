@@ -97,3 +97,5 @@ nnoremap <leader>t :NnnPicker %:p:h<CR>
 " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
 " au FileType markdown vmap <Enter> <Plug>(EasyAlign)
 au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
+
+nmap <leader>g :Gstatus<cr>
