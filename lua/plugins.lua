@@ -2,23 +2,29 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Aesthetics
-  use 'mhartington/oceanic-next'
   use {
-    'Famiu/feline.nvim',
-    -- your statusline
-    config = function() require("statusline") end,
-    -- some optional icons
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    'mhartington/oceanic-next',
+    config = function ()
+      vim.cmd("set termguicolors")
+      vim.cmd("colorscheme OceanicNext")
+    end
+  }
+  use {
+    'itchyny/lightline.vim',
+    config = function ()
+      vim.cmd [[
+        let g:lightline = {
+        \ 'colorscheme': 'oceanicnext',
+        \ }
+      ]]
+    end
   }
   -- use {
-  --   'konapun/vacuumline.nvim',
-  --   requires = {
-  --     'glepnir/galaxyline.nvim', branch = 'main',
-  --     'kyazdani42/nvim-web-devicons', opt = true
-  --   },
-  --   config = function() require('vacuumline').setup({
-  --     theme = require('vacuumline.theme.one-dark')
-  --   }) end
+  --   'vim-airline/vim-airline',
+  --   requires = { 'vim-airline/vim-airline-themes' },
+  --   config = function ()
+  --     vim.cmd "let g:airline_theme='oceanicnext'"
+  --   end
   -- }
 
   -- Git integration
