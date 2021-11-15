@@ -35,6 +35,19 @@ vim.api.nvim_set_keymap("n", "H", ":tabp<CR>", {noremap = true})
 vim.cmd("cabbrev t tabe")
 
 -- COC
-vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", {noremap = true})
-vim.api.nvim_set_keymap("n", "gt", "<Plug>(coc-type-definitions)", {noremap = true})
-vim.api.nvim_set_keymap("n", "gr", "<Plug>(coc-references)", {noremap = true})
+-- vim.api.nvim_set_keymap("n", "gd", "<Plug>(coc-definition)", {noremap = true})
+-- vim.api.nvim_set_keymap("n", "gt", "<Plug>(coc-type-definitions)", {noremap = true})
+-- vim.api.nvim_set_keymap("n", "gr", "<Plug>(coc-references)", {noremap = true})
+
+
+-- Treesitter
+vim.api.nvim_set_keymap("n", "<leader>p", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-x>f", "<cmd>lua require('telescope.builtin').find_files()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-x>d", "<cmd>lua require('telescope.builtin').file_browser()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-s>", "<cmd>lua require'telescope.builtin'.live_grep{ search_dirs={\"%:p\"} }<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<C-x>b", "<cmd>lua require('telescope.builtin').buffers()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>gs", "<cmd>lua require('telescope.builtin').git_status()<cr>", {noremap = true})

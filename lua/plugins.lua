@@ -37,6 +37,26 @@ return require('packer').startup(function()
     config = function () require("treesitter") end
   }
 
+  -- Which Key
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+
+  -- Telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function () require('telescope_config') end
+  }
+
+
   -- Editing
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary'
