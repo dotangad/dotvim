@@ -14,7 +14,20 @@ return require('packer').startup(function()
     config = function ()
       vim.cmd [[
         let g:lightline = {
-        \ 'colorscheme': 'oceanicnext',
+          \ 'colorscheme': 'oceanicnext',
+          \ 'mode_map': {
+          \ 'n' : 'N',
+          \ 'i' : 'I',
+          \ 'R' : 'R',
+          \ 'v' : 'V',
+          \ 'V' : 'VL',
+          \ "\<C-v>": 'VB',
+          \ 'c' : 'C',
+          \ 's' : 'S',
+          \ 'S' : 'SL',
+          \ "\<C-s>": 'SB',
+          \ 't': 'T',
+          \ },
         \ }
       ]]
     end
@@ -33,14 +46,21 @@ return require('packer').startup(function()
     requires = {
       'nvim-lua/plenary.nvim'
     },
-    config = function() require("gitsigns_config") end
+    config = function() require("my.gitsigns") end
+  }
+  use {
+    'TimUntersberger/neogit',
+    requires = 'nvim-lua/plenary.nvim',
+    config = function ()
+      require("neogit").setup {}
+    end
   }
 
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    config = function () require("treesitter") end
+    config = function () require("my.treesitter") end
   }
 
   -- Which Key
@@ -59,9 +79,8 @@ return require('packer').startup(function()
   use {
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
-    config = function () require('telescope_config') end
+    config = function () require('my.telescope') end
   }
-
 
   -- Editing
   use 'tpope/vim-surround'
@@ -80,15 +99,19 @@ return require('packer').startup(function()
   use 'alampros/vim-styled-jsx'
   use 'jxnblk/vim-mdx-js'
 
+  -- Web dev
+  use 'mattn/emmet-vim'
+
   -- Misc
   use 'tpope/vim-sensible'
+  use 'tpope/vim-eunuch'
   use 'editorconfig/editorconfig-vim'
 
   -- LSP
-  -- use {
-  --   'neoclide/coc.nvim',
-  --   branch = "release",
-  --   config = function () require("coc") end
-  -- }
-  use 'neovim/nvim-lspconfig'
+  use {
+    'neoclide/coc.nvim',
+    branch = "release",
+    config = function () require("my.coc") end
+  }
+  -- use 'neovim/nvim-lspconfig'
 end)

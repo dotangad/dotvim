@@ -18,9 +18,16 @@ vim.bo.swapfile = false
 -- Automatically update files
 vim.o.autoread = true
 
+-- Show trailing spaces
+vim.o.list = true
+vim.o.listchars = "tab:> ,trail:·"
+
 -- Line numbers
 vim.o.number = true
 vim.o.relativenumber = true
+
+-- Clipboard
+vim.o.clipboard="unnamedplus"
 
 -- Search
 vim.o.incsearch = true
