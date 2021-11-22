@@ -45,3 +45,7 @@ vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin'
 vim.api.nvim_set_keymap("n", "<C-x>b", "<cmd>lua require('telescope.builtin').buffers()<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", {noremap = true})
 vim.api.nvim_set_keymap("n", "<leader>gs", "<cmd>lua require('telescope.builtin').git_status()<cr>", {noremap = true})
+
+-- Misc
+vim.api.nvim_set_keymap("n", "<leader>ng", ":Neogit<cr>", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>T", ":NvimTreeToggle<cr>", {noremap = true})

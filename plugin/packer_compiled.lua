@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/MatchTag",
     url = "https://github.com/gregsexton/MatchTag"
   },
+  ["TrueZen.nvim"] = {
+    loaded = true,
+    path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/TrueZen.nvim",
+    url = "https://github.com/Pocco81/TrueZen.nvim"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/auto-pairs",
@@ -84,6 +89,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
+  },
+  ["dashboard-nvim"] = {
+    config = { "\27LJ\2\nQ\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0002let g:dashboard_default_executive='telescope'\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "https://github.com/glepnir/dashboard-nvim"
+  },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
   },
   ["editorconfig-vim"] = {
     loaded = true,
@@ -108,16 +124,27 @@ _G.packer_plugins = {
     url = "https://github.com/itchyny/lightline.vim"
   },
   neogit = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vneogit\frequire\0" },
+    config = { "\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14my.neogit\frequire\0" },
     loaded = true,
     path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/TimUntersberger/neogit"
+  },
+  ["nvim-tree.lua"] = {
+    config = { "\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17my.nvim-tree\frequire\0" },
+    loaded = true,
+    path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     config = { "\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18my.treesitter\frequire\0" },
     loaded = true,
     path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/dotangad/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["oceanic-next"] = {
     config = { "\27LJ\2\n]\0\0\3\0\4\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\1K\0\1\0\28colorscheme OceanicNext\22set termguicolors\bcmd\bvim\0" },
@@ -205,10 +232,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: neogit
+time([[Config for neogit]], true)
+try_loadstring("\27LJ\2\n)\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\14my.neogit\frequire\0", "config", "neogit")
+time([[Config for neogit]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16my.gitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: lightline.vim
+time([[Config for lightline.vim]], true)
+try_loadstring("\27LJ\2\n®\3\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ž\3        let g:lightline = {\n          \\ 'colorscheme': 'oceanicnext',\n          \\ 'mode_map': {\n          \\ 'n' : 'N',\n          \\ 'i' : 'I',\n          \\ 'R' : 'R',\n          \\ 'v' : 'V',\n          \\ 'V' : 'VL',\n          \\ \"\\<C-v>\": 'VB',\n          \\ 'c' : 'C',\n          \\ 's' : 'S',\n          \\ 'S' : 'SL',\n          \\ \"\\<C-s>\": 'SB',\n          \\ 't': 'T',\n          \\ },\n        \\ }\n      \bcmd\bvim\0", "config", "lightline.vim")
+time([[Config for lightline.vim]], false)
 -- Config for: coc.nvim
 time([[Config for coc.nvim]], true)
 try_loadstring("\27LJ\2\n&\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\vmy.coc\frequire\0", "config", "coc.nvim")
 time([[Config for coc.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17my.nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
 -- Config for: oceanic-next
 time([[Config for oceanic-next]], true)
 try_loadstring("\27LJ\2\n]\0\0\3\0\4\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\1\0'\2\3\0B\0\2\1K\0\1\0\28colorscheme OceanicNext\22set termguicolors\bcmd\bvim\0", "config", "oceanic-next")
@@ -221,18 +264,10 @@ time([[Config for telescope.nvim]], false)
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18my.treesitter\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16my.gitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
--- Config for: neogit
-time([[Config for neogit]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\vneogit\frequire\0", "config", "neogit")
-time([[Config for neogit]], false)
--- Config for: lightline.vim
-time([[Config for lightline.vim]], true)
-try_loadstring("\27LJ\2\n®\3\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0Ž\3        let g:lightline = {\n          \\ 'colorscheme': 'oceanicnext',\n          \\ 'mode_map': {\n          \\ 'n' : 'N',\n          \\ 'i' : 'I',\n          \\ 'R' : 'R',\n          \\ 'v' : 'V',\n          \\ 'V' : 'VL',\n          \\ \"\\<C-v>\": 'VB',\n          \\ 'c' : 'C',\n          \\ 's' : 'S',\n          \\ 'S' : 'SL',\n          \\ \"\\<C-s>\": 'SB',\n          \\ 't': 'T',\n          \\ },\n        \\ }\n      \bcmd\bvim\0", "config", "lightline.vim")
-time([[Config for lightline.vim]], false)
+-- Config for: dashboard-nvim
+time([[Config for dashboard-nvim]], true)
+try_loadstring("\27LJ\2\nQ\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0002let g:dashboard_default_executive='telescope'\bcmd\bvim\0", "config", "dashboard-nvim")
+time([[Config for dashboard-nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")

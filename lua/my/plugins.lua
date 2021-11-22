@@ -39,6 +39,12 @@ return require('packer').startup(function()
   --     vim.cmd "let g:airline_theme='oceanicnext'"
   --   end
   -- }
+  use {
+    'glepnir/dashboard-nvim',
+    config = function ()
+       vim.cmd "let g:dashboard_default_executive='telescope'"
+    end
+  }
 
   -- Git integration
   use {
@@ -50,10 +56,11 @@ return require('packer').startup(function()
   }
   use {
     'TimUntersberger/neogit',
-    requires = 'nvim-lua/plenary.nvim',
-    config = function ()
-      require("neogit").setup {}
-    end
+    requires = {
+      'nvim-lua/plenary.nvim',
+      'sindrets/diffview.nvim' 
+    },
+    config = function () require("my.neogit") end
   }
 
   -- Treesitter
@@ -92,7 +99,7 @@ return require('packer').startup(function()
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require'nvim-tree'.setup {} end
+    config = function() require('my.nvim-tree') end
   }
 
   -- PHP/Laravel
@@ -113,6 +120,7 @@ return require('packer').startup(function()
   use 'tpope/vim-sensible'
   use 'tpope/vim-eunuch'
   use 'editorconfig/editorconfig-vim'
+  use 'Pocco81/TrueZen.nvim'
 
   -- LSP
   use {

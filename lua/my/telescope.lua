@@ -8,7 +8,9 @@ require('telescope').setup{
         -- e.g. git_{create, delete, ...}_branch for the git_branches picker
         ["<C-g>"] = "close"
       }
-    }
+    },
+    prompt_prefix = " ",
+    selection_caret = " ",
   },
   pickers = {
     -- Default configuration for builtin pickers goes here:
