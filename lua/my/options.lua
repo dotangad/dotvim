@@ -1,14 +1,19 @@
+vim.cmd("set nocompatible")
 vim.cmd("syntax enable")
 vim.cmd("filetype plugin indent on")
 
 -- Indentation
 -- I like no tabs, and 2 spaces
+vim.o.tabstop = 2
+vim.g.tabstop = 2
 vim.bo.tabstop = 2
-vim.bo.softtabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
+vim.g.shiftwidth = 2
 vim.bo.shiftwidth = 2
-vim.bo.expandtab = true
-vim.bo.autoindent = true
-vim.bo.smartindent = true
+vim.o.expandtab = true
+vim.o.autoindent = true
+vim.o.smartindent = true
 
 -- No backups
 vim.o.backup = false
